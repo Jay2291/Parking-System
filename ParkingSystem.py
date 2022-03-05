@@ -5,8 +5,9 @@ class ParkingSystem:
     def addVehicle(self, carType):
         if(self.sp[carType]>0):
             self.sp[carType] -= 1
-            return True
-        return False
+            return("Parking Allocated")
+        else:
+            return("Parking full for this type")
     
 ps = ParkingSystem(2, 0, 1)
 print(ps.addVehicle(3))
